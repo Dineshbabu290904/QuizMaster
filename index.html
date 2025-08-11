@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master - Test Your Knowledge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="startScreen">
+            <h1>Quiz Master</h1>
+            <p class="subtitle">Test your knowledge with our interactive quiz!</p>
+            <button class="btn" onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" class="hidden">
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            
+            <div class="question-counter" id="questionCounter"></div>
+            <div class="timer" id="timer">Time: 30s</div>
+            
+            <div class="question-container fade-in">
+                <div class="question" id="question"></div>
+                <div class="options" id="options"></div>
+            </div>
+            
+            <button class="btn" id="nextBtn" onclick="nextQuestion()" disabled>Next Question</button>
+            
+            <div class="score-display">
+                Current Score: <span id="currentScore">0</span>/10
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="hidden">
+            <div class="results fade-in">
+                <h2>Quiz Complete!</h2>
+                <div class="final-score" id="finalScore"></div>
+                <div class="score-message" id="scoreMessage"></div>
+                <button class="btn" onclick="restartQuiz()">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
